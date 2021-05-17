@@ -21,7 +21,7 @@ export class HelloWorldView extends View {
   }
 
   async sayHello() {
-    const result: SyncStatus = await hello();
+    const result: SyncStatus = await hello(this.name);
     showNotification(`Hello` + result);
   }
 }

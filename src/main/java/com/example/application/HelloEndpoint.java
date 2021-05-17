@@ -6,7 +6,7 @@ import com.vaadin.flow.server.connect.auth.AnonymousAllowed;
 @Endpoint
 @AnonymousAllowed
 public class HelloEndpoint {
-    public SyncStatus hello(){
-        return SyncStatus.ERRORED;
+    public SyncStatus hello(String value){
+        return SyncStatus.forName(value);
     }
 }
